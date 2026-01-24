@@ -18,6 +18,11 @@ A headless WeeChat IRC client add-on for Home Assistant with relay support and D
 
 ### Add This Repository to Home Assistant
 
+Use this button or the below steps:
+
+[![Open your Home Assistant instance and show the add add-on repository dialog with a specific repository URL pre-filled.](https://my.home-assistant.io/badges/supervisor_add_addon_repository.svg)](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2FStullemon%2Fhassio-addons)
+
+
 1. Open Home Assistant and navigate to **Settings → Add-ons, Backups & Supervisor → Add-on Store**
 
 2. Click the three-dot menu (⋯) in the top right corner
