@@ -1,0 +1,13 @@
+configuration:
+  relay_port:
+    name: Relay Port
+    description: Port for the WeeChat relay server.
+  relay_password:
+    name: Relay Password
+    description: Password for connecting to the WeeChat relay server.
+  auto_accept_dcc:
+    name: Auto Accept DCC Files
+    description: Automatically accept incoming DCC file transfers.
+  enable_monitor_script:
+    name: Enable Monitor Script
+    description: Enable monitor script as prerequisite to using Weechat Monitor custom component in Home Assistant.
