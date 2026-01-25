@@ -39,6 +39,8 @@ Configure the add-on through the **Configuration** tab in the add-on details:
 | `auto_accept_dcc` | boolean | `false` | Automatically accept incoming DCC file transfers without prompting |
 | `enable_monitor_script` | boolean | `false` | Enable the weechat_monitor script to send irc server/channel/chat counters and download notifications to Home Assistant |
 
+⚠️ **Important**: weechat_monitor script requires installation of [WeeChat Monitor custom component](https://github.com/Stullemon/hassio-weechat-integration).
+
 ### Example Configuration
 
 ```yaml
@@ -70,7 +72,7 @@ Use the configured `relay_password` to authenticate.
 
 - **Download Path**: `/share/weechat_downloads` (maps to Home Assistant's `/share` via Samba)
 - **Auto-Accept**: When enabled, DCC files are automatically accepted
-- **Monitor Script**: When enabled, completed downloads trigger notifications to Home Assistant (requires weechat_monitor custom component)
+- **Monitor Script**: When enabled, completed downloads trigger notifications to Home Assistant (requires [WeeChat Monitor custom component](https://github.com/Stullemon/hassio-weechat-integration))
 - **Download Log**: View all completed downloads in `/config/weechat/dcc_history.log`
 
 ### Accessing Downloads
