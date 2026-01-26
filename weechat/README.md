@@ -168,6 +168,7 @@ This add-on is licensed under the [MIT License](../LICENSE).
 - WeeChat is a registered trademark of its respective owners
 - This add-on is not affiliated with the WeeChat project
 - This add-on is provided as-is without warranty
+- This add-on was created in part with the help of ChatGPT and Claude Sonnet
 - Use at your own risk
 
 ## Support
