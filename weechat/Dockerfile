@@ -66,7 +66,7 @@ FROM ${BUILD_FROM}
 SHELL ["/bin/ash", "-eo", "pipefail", "-c"]
 
 # Metadata and environment
-LABEL maintainer="your-email@example.com"
+LABEL maintainer="stulleamgym@gmx.net"
 ENV LANG="C.UTF-8"
 ENV TERM="xterm-256color"
 
