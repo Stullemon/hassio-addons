@@ -1,9 +1,11 @@
-# WeeChat Add-on for Home Assistant
+# WeeChat App for Home Assistant
 
 ![Project Status](https://img.shields.io/badge/status-beta-orange)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
-A headless [WeeChat](https://weechat.org/) IRC client add-on for Home Assistant with relay support and file transfer capabilities. Run your IRC client continuously and interact with it remotely via the WeeChat relay protocol.
+A headless [WeeChat](https://weechat.org/) IRC client app for Home Assistant with relay support and file transfer capabilities. Run your IRC client continuously and interact with it remotely via the WeeChat relay protocol.
+
+Current WeeChat version: **v4.8.2** (App version 0.1.3)
 
 ## Features
 
@@ -17,18 +19,18 @@ A headless [WeeChat](https://weechat.org/) IRC client add-on for Home Assistant 
 
 ## Installation
 
-1. Navigate to **Settings → Add-ons, Backups & Supervisor → Add-on Store**
+1. Navigate to **Settings → Apps → Install app**
 2. Click the three-dot menu (⋯) in the top right corner
 3. Select **Repositories**
 4. Add this URL: `https://github.com/Stullemon/hassio-addons`
 5. Click **Create**
 6. Refresh the page (Ctrl+F5 or Cmd+Shift+R)
-7. Search for "WeeChat" in the Add-on Store
+7. Search for "WeeChat" in the App Store
 8. Click **Install**
 
 ## Configuration
 
-Configure the add-on through the **Configuration** tab in the add-on details:
+Configure the app through the **Configuration** tab in the app details:
 
 ### Options
 
@@ -54,7 +56,7 @@ enable_monitor_script: true
 
 ### Starting WeeChat
 
-1. Go to **Settings → Add-ons, Backups & Supervisor → Add-ons**
+1. Go to **Settings → Apps**
 2. Find **WeeChat** in the list
 3. Click **Start**
 4. Check the **Logs** tab to monitor startup
@@ -79,12 +81,12 @@ Use the configured `relay_password` to authenticate.
 
 Downloads are stored in the Home Assistant `/share` directory:
 - **Via Samba**: `\\<homeassistant>/share/weechat_downloads/`
-- **Via Home Assistant UI**: Media → Share folder (if using Samba add-on)
+- **Via Home Assistant UI**: Media → Share folder (if using Samba app)
 - **Via SSH**: `/share/weechat_downloads/`
 
 ## Data Persistence
 
-The add-on stores all data in `/config/weechat/`:
+The app stores all data in `/config/weechat/`:
 - **weechat.conf**: Main configuration file (auto-created on first run)
 - **weechat.log**: Debug logs
 - **python/**: Python scripts directory (weechat_monitor.py is auto-installed here)
@@ -92,18 +94,18 @@ The add-on stores all data in `/config/weechat/`:
 
 All data persists across restarts and updates.
 
-⚠️ **Important**: weechat_monitor.py in Python script directory will automatically reset to build version upon start of add-on. Do not attempt to override directly (use new scripts or fork add-on instead).
+⚠️ **Important**: weechat_monitor.py in Python script directory will automatically reset to build version upon start of app. Do not attempt to override directly (use new scripts or fork app instead).
 
 ## Security Considerations
 
-⚠️ **Important**: This add-on uses `host_network: true` for IRC relay access.
+⚠️ **Important**: This appuses `host_network: true` for IRC relay access.
 
 - **Change the default relay password immediately** before enabling remote access
 - Use a **strong, unique password** (20+ characters recommended)
 - Restrict relay access to your internal network when possible
 - Use a **VPN or firewall rules** if exposing the relay to the internet
 - Monitor the logs for suspicious connection attempts
-- Keep Home Assistant and the add-on updated for security patches
+- Keep Home Assistant and the app updated for security patches
 
 ## Troubleshooting
 
@@ -111,13 +113,13 @@ All data persists across restarts and updates.
 
 Check the **Logs** tab for error messages. Common issues:
 
-- **"SUPERVISOR_TOKEN not set"**: Ensure the add-on is running within Home Assistant (not manually in Docker)
+- **"SUPERVISOR_TOKEN not set"**: Ensure the app is running within Home Assistant (not manually in Docker)
 - **Port already in use**: Change `relay_port` to an available port
 - **Build failures**: Ensure your Home Assistant instance has enough disk space
 
 ### Relay Not Connecting
 
-- Verify the relay port is listening: check add-on logs
+- Verify the relay port is listening: check app logs
 - Ensure firewall allows connections to the relay port
 - Try connecting from the same machine first to rule out network issues
 - Check relay credentials (password, port number)
@@ -141,7 +143,7 @@ Check the **Logs** tab for error messages. Common issues:
 ### Building Locally
 
 ```bash
-# This add-on is built using Home Assistant's build system
+# This app is built using Home Assistant's build system
 # For local development, use Home Assistant dev container or build scripts
 ```
 
@@ -149,7 +151,7 @@ Check the **Logs** tab for error messages. Common issues:
 
 ```
 weechat/
-├── config.yaml          # Add-on metadata and configuration schema
+├── config.yaml          # App metadata and configuration schema
 ├── build.yaml           # Multi-architecture build configuration
 ├── Dockerfile           # Multi-stage build for WeeChat from source
 ├── run.sh               # Startup script and service orchestration
@@ -161,14 +163,14 @@ weechat/
 
 ## License
 
-This add-on is licensed under the [MIT License](../LICENSE).
+This app is licensed under the [MIT License](../LICENSE).
 
 ## Disclaimer
 
 - WeeChat is a registered trademark of its respective owners
-- This add-on is not affiliated with the WeeChat project
-- This add-on is provided as-is without warranty
-- This add-on was created in part with the help of ChatGPT and Claude Sonnet
+- This app is not affiliated with the WeeChat project
+- This app is provided as-is without warranty
+- This app was created in part with the help of ChatGPT and Claude Sonnet
 - Use at your own risk
 
 ## Support
