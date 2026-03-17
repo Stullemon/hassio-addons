@@ -5,7 +5,7 @@ FROM ${BUILD_FROM} AS build
 SHELL ["/bin/ash", "-eo", "pipefail", "-c"]
 
 # Pin version in one place
-ARG WEECHAT_VERSION=v4.8.1
+ARG WEECHAT_VERSION=v4.8.2
 ENV WEECHAT_REPO=https://github.com/weechat/weechat.git
 
 # Install ONLY build dependencies (runtime deps go in final stage)
