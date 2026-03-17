@@ -35,7 +35,7 @@ fi
 # Ensure SUPERVISOR_TOKEN is available (it should be set by Home Assistant)
 if [ -z "$SUPERVISOR_TOKEN" ]; then
     echo "[ERROR] SUPERVISOR_TOKEN not set - weechat_monitor integration will not work!"
-    echo "[ERROR] This addon must run as a Home Assistant add-on"
+    echo "[ERROR] This addon must run as a Home Assistant app"
     exit 1
 # else
 #     echo "[INFO] Supervisor token available: ${SUPERVISOR_TOKEN:0:10}... ✓"

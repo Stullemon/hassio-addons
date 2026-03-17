@@ -78,7 +78,7 @@ def notify_home_assistant(service, payload, suppress_on_404=False):
     if api_suppressed:
         return False
     
-    # Get Supervisor token from environment (automatically available in add-ons)
+    # Get Supervisor token from environment (automatically available in apps)
     supervisor_token = os.environ.get('SUPERVISOR_TOKEN')
     
     if not supervisor_token:
@@ -293,4 +293,4 @@ if weechat.register(SCRIPT_NAME, SCRIPT_AUTHOR, SCRIPT_VERSION, SCRIPT_LICENSE,
         log("Loaded! Using Supervisor API (automatic authentication)")
     else:
         log("WARNING: SUPERVISOR_TOKEN not found - notifications will fail")
-        log("This script requires running inside a Home Assistant add-on")
+        log("This script requires running inside a Home Assistant app")
