@@ -1,5 +1,5 @@
 name: WeeChat
-version: "0.1.3"
+version: "0.1.4"
 slug: weechat
 description: >-
   Headless WeeChat app with relay and access to /share (for DCC downloads).
