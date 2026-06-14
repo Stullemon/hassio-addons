@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.4
+
+- Updated WeeChat to v4.9.2
+
 ## 0.1.3
 
 - Updated WeeChat to v4.8.2

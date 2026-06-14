@@ -5,7 +5,7 @@
 
 A headless [WeeChat](https://weechat.org/) IRC client app for Home Assistant with relay support and file transfer capabilities. Run your IRC client continuously and interact with it remotely via the WeeChat relay protocol.
 
-Current WeeChat version: **v4.8.2** (App version 0.1.3)
+Current WeeChat version: **v4.9.2** (App version 0.1.4)
 
 ## Features
 
